@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Move";
+}
+
+<h2>Move</h2>
+@using (Html.BeginForm()) {
+    <div>
+  Please enter the Movement command with '|' key (eg. place 0,0,east|move|move|left|move|report): 
+        </div>
+@Html.TextBox("strValue");
+        
+    <div>
+@ViewBag.Output
+    </div>
+    <div>
+        
+<input type="submit" value="Move" />
+        </div>
+    <div>
+        <p>
+        Test Inputs are: <br />
+        place 5,5,east|move|move|left|move|report<br />
+        place 0,0,east|move|move|left|move|report<br />
+        left|place 0,0,east|move|move|left|move|report<br />
+        PLACE 0,0,NORTH|MOVE|REPORT<br />
+        PLACE 0,0,NORTH|LEFT|REPORT<br />
+        PLACE 1,2,EAST|MOVE|MOVE|LEFT|MOVE|REPORT<br />
+            </p>
+    </div>
+}
+
